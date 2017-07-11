@@ -24,7 +24,30 @@ public class Calc {
             num2 = scan.nextInt();
             ans = num1 + num2;
             System.out.println("Your answer is " +ans);
-
+        }
+        if (op==2){
+            System.out.println("Input your first number");
+            num1 = scan.nextInt();
+            System.out.println("Input your second number");
+            num2 = scan.nextInt();
+            ans = num1 - num2;
+            System.out.println("Your answer is " +ans);
+        }
+        if (op==3){
+            System.out.println("Input your first number");
+            num1 = scan.nextInt();
+            System.out.println("Input your second number");
+            num2 = scan.nextInt();
+            ans = num1 * num2;
+            System.out.println("Your answer is " +ans);
+        }
+        if (op==4){
+            System.out.println("Input your first number");
+            num1 = scan.nextInt();
+            System.out.println("Input your second number");
+            num2 = scan.nextInt();
+            ans = num1 / num2;
+            System.out.println("Your answer is " +ans);
         }
     }
 }
