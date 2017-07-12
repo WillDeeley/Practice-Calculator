@@ -6,12 +6,14 @@ public class Calc {
 
     static int op;
     static Scanner scan = new Scanner(System.in);
-    static double num1;
-    static double num2;
-    static double ans;
     static String again = "";
 
     public static void main(String[] args) {
+
+        Addition addition = new Addition();
+        Subtraction subtraction = new Subtraction();
+        Multiplication multiplication = new Multiplication();
+        Division division = new Division();
 
         do {
             do {
@@ -19,36 +21,16 @@ public class Calc {
                 op = scan.nextInt();
             } while (op < 1 || op > 4);
             if (op == 1) {
-                System.out.println("Input your first number");
-                num1 = scan.nextInt();
-                System.out.println("Input your second number");
-                num2 = scan.nextInt();
-                ans = num1 + num2;
-                System.out.println("Your answer is " + ans);
+                addition.calcAddition();
             }
             if (op == 2) {
-                System.out.println("Input your first number");
-                num1 = scan.nextInt();
-                System.out.println("Input your second number");
-                num2 = scan.nextInt();
-                ans = num1 - num2;
-                System.out.println("Your answer is " + ans);
+                subtraction.calcSubtraction();
             }
             if (op == 3) {
-                System.out.println("Input your first number");
-                num1 = scan.nextInt();
-                System.out.println("Input your second number");
-                num2 = scan.nextInt();
-                ans = num1 * num2;
-                System.out.println("Your answer is " + ans);
+                multiplication.calcMultiplication();
             }
             if (op == 4) {
-                System.out.println("Input your first number");
-                num1 = scan.nextInt();
-                System.out.println("Input your second number");
-                num2 = scan.nextInt();
-                ans = num1 / num2;
-                System.out.println("Your answer is " + ans);
+                division.calcDivision();
             }
             scan.nextLine();
             System.out.println("Again? Y/N");
